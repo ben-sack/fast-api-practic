@@ -3,6 +3,7 @@ black
 isort
 # app
 fastapi
+click==8.0.1
 uvicorn
 pydantic
 email-validator

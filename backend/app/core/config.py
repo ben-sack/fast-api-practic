@@ -3,8 +3,8 @@ from starlette.config import Config
 from starlette.datastructures import Secret
 
 config = Config(".env")
-PROJECT_NAME = "phresh"
-VERSION = "1.0.0"
+PROJECT_NAME = "Test"
+VERSION = "0.1.0"
 API_PREFIX = "/api"
 SECRET_KEY = config("SECRET_KEY", cast=Secret, default="CHANGEME")
 POSTGRES_USER = config("POSTGRES_USER", cast=str)
