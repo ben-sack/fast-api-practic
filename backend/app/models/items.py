@@ -30,7 +30,7 @@ class ItemUpdate(ItemBase):
     item_type: Optional[ItemType]
 
 
-class ItemModel(IDModelMixing, ItemBase):
+class Item(IDModelMixing, ItemBase):
     name: str
     price: float
     item_type: ItemType
