@@ -11,3 +11,4 @@ email-validator
 databases[postgresql]
 SQLAlchemy
 alembic
+psycopg2-binary
