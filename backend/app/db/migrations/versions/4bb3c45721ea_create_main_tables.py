@@ -4,15 +4,15 @@ Revises:
 Create Date: 2022-08-06 21:51:36.629070
 """
 
-from alembic import op
 import sqlalchemy as sa
-
+from alembic import op
 
 # revision identifiers, used by Alembic
-revision = '4bb3c45721ea'
+revision = "4bb3c45721ea"
 down_revision = None
 branch_labels = None
 depends_on = None
+
 
 def create_items_table() -> None:
     op.create_table(
@@ -23,8 +23,10 @@ def create_items_table() -> None:
         sa.Column("price", sa.Numeric(10, 2), nullable=False),
     )
 
+
 def upgrade() -> None:
     create_items_table()
-    
+
+
 def downgrade() -> None:
     op.drop_table("items")
