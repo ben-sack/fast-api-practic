@@ -1,24 +1,24 @@
 from enum import Enum
 from typing import Optional
 
-from app.models.core import CoreModel, IDModelMixing
+from app.models.core import CoreModel, IDModelMixin
 
 
 # It would be cool to create this model
 # based off an external source
 class ItemType(str, Enum):
-    chicken_bowl = "chicken_bowl"
-    chicken_sandwhich = "chicken_sandwich"
-    mushroom_skewer = "mushroom_skewer"
-    hummus_plate = "hummus_plate"
-    crudo = "crudo"
+    meat = "meat"
+    vegitarien = "vegitarien"
+    drink = "drink"
+    desert = "desert"
+    dairy = "dairy"
 
 
 class ItemBase(CoreModel):
     name: Optional[str]
-    ingredient: Optional[str]
+    ingredients: Optional[str]
     price: Optional[float]
-    item_type = Optional[ItemType]
+    item_type: Optional[ItemType]
 
 
 class ItemCreate(ItemBase):
@@ -30,11 +30,11 @@ class ItemUpdate(ItemBase):
     item_type: Optional[ItemType]
 
 
-class ItemModel(IDModelMixing, ItemBase):
+class Item(IDModelMixin, ItemBase):
     name: str
     price: float
     item_type: ItemType
 
 
-class ItemPublic(IDModelMixing, ItemBase):
+class ItemPublic(IDModelMixin, ItemBase):
     pass
