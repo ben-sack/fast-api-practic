@@ -14,8 +14,6 @@ class ItemType(str, Enum):
     dairy = "dairy"
 
 
-
-
 class ItemBase(CoreModel):
     name: Optional[str]
     ingredients: Optional[str]

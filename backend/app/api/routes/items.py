@@ -2,10 +2,9 @@ from typing import Any, Dict, List
 
 from app.api.dependencies.database import get_repository
 from app.db.repositories.items import ItemRepository
-from app.models.items import ItemCreate, ItemPublic, Item
+from app.models.items import Item, ItemCreate, ItemPublic
 from fastapi import APIRouter, Body, Depends
 from starlette.status import HTTP_201_CREATED
-
 
 router = APIRouter()
 
