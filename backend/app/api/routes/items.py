@@ -12,7 +12,7 @@ router = APIRouter()
 @router.get(
     "/",
     response_model=List[ItemPublic],
-    name="itemts:get-items",
+    name="items:get-items",
     status_code=HTTP_201_CREATED,
 )
 async def get_all_items(
